@@ -57,7 +57,7 @@ class BookServiceApplicationTests
 		 String url="http://localhost:"+localServerPort+"addBook";
 		 Book book = null;
 		 ResponseEntity<String> response = testRestTemplate.postForEntity(url,book,String.class);
-		 //Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCodeValue());
+		 Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCodeValue());
 	}
 	
 	@Test
